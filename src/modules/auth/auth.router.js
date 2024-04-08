@@ -1,0 +1,10 @@
+import { Router } from "express";
+import * as authcontroller from "./auth.controller.js";
+import { asyncHandler } from "../../utils/errorHandling.js";
+import validation from "../../middleware/validation.middleware.js";
+import { signinSchema, signupSchema } from "./auth.validation.js";
+const router = Router();
+router.post('/signup',validation(signupSchema),asyncHandler(authcontroller.signup));
+router.post('/signin',validation(signinSchema),asyncHandler(authcontroller.signin));
+router.get('/confirmEmail/:token',asyncHandler(authcontroller.confirmEmail));
+export default router;
