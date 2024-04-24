@@ -5,6 +5,6 @@ export const profile = async(req,res,next)=>{
    return res.json({massage:"success",user});
 }
 export const Uploadimg = async(req,res,next)=>{
-  return res.json("welocme");
+  return res.json(req.file);
 
 }

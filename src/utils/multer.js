@@ -16,7 +16,7 @@ function fileFilter (req, file, cb) {
        
     cb(null, true);
    }else{
-    cb(null, true);
+
     cb("invaild format", false);
    }
   
