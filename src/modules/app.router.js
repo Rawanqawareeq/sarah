@@ -8,7 +8,7 @@ const initApp = (app,express)=>{
    app.use(express.json());
    connectDB();
    app.get('/', (req, res) => {
-      res.json('Hello World!');
+      res.json('welcome');
     });    
    app.use('/auth',authRouter);
    app.use('/Massage',MassageRouter);

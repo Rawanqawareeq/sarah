@@ -12,10 +12,11 @@ function fileUpload(){
 })
 function fileFilter (req, file, cb) {
 
-   if(file.mimetype == 'image/jpeg'){
+   if(['image/jpeg','image/svg+xml','image/gif'].includes(file.mimetype)){
        
     cb(null, true);
    }else{
+    cb(null, true);
     cb("invaild format", false);
    }
   
