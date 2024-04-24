@@ -7,6 +7,9 @@ import UserRouter from "./user/user.router.js";
 const initApp = (app,express)=>{
    app.use(express.json());
    connectDB();
+   app.get('/', (req, res) => {
+      res.json('Hello World!');
+    });    
    app.use('/auth',authRouter);
    app.use('/Massage',MassageRouter);
    app.use('/user',auth,UserRouter);
