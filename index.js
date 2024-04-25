@@ -4,6 +4,6 @@ import 'dotenv/config';
 const app = express();
 initApp(app,express);
 
-app.listen(process.env.PORT,()=>{
+app.listen(process.env.PORT || 7000,()=>{
     console.log("server is running ... ");
 })
