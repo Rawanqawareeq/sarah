@@ -24,4 +24,4 @@ function fileFilter (req, file, cb) {
 const upload = multer({fileFilter,storage})
 return upload;
 }
-export default fileUpload;
+export default upload;
